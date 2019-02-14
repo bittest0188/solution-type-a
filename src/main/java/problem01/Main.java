@@ -1,5 +1,7 @@
 package problem01;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -20,7 +22,18 @@ public class Main {
 		}
 	}
 	
-	public static int countClap(int number) {
-		return 0;
+	public static int countClap(int number) {	
+		String[] array_number; 	
+		String pars_num = String.valueOf(number);
+		int sum = 0;
+		for(int i = 0; i < pars_num.length(); i++) {
+		    int j = Character.digit(pars_num.charAt(i), 10);
+		    if(j == 3 ||j == 6 ||j == 9) {
+		    	sum++;
+		    }
+		}
+			
+//		return number;
+		return sum;
 	}
 }
